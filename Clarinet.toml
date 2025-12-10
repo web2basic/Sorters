@@ -1,0 +1,22 @@
+[project]
+name = "sorters"
+authors = ["Sorters Team"]
+description = "A decentralized note-keeping application on Stacks blockchain"
+
+[contracts.sorters]
+path = "contracts/sorters.clar"
+depends_on = []
+
+[networks]
+[networks.devnet]
+deployment_fee = 1000000
+
+[networks.testnet]
+deployment_fee = 1000000
+
+[networks.mainnet]
+deployment_fee = 1000000
+
+[requirements]
+clarinet = ">=1.0.0"
+

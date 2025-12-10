@@ -1,0 +1,39 @@
+{
+  "name": "sorters",
+  "version": "1.0.0",
+  "description": "A decentralized note-keeping application on Stacks blockchain",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test:contract",
+    "test:contract": "clarinet test",
+    "test:integration": "npm run test:contract",
+    "devnet": "clarinet devnet",
+    "deploy:testnet": "clarinet deploy --testnet",
+    "deploy:mainnet": "clarinet deploy --mainnet",
+    "check": "clarinet check",
+    "format": "prettier --write \"**/*.{js,ts,json,md,clar}\"",
+    "lint": "eslint . --ext .js,.ts"
+  },
+  "keywords": [
+    "stacks",
+    "blockchain",
+    "clarity",
+    "decentralized",
+    "notes",
+    "web3"
+  ],
+  "author": "Sorters Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@stacks/clarinet-sdk": "^1.0.0",
+    "@stacks/cli": "^6.0.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@stacks/connect": "^6.0.0",
+    "@stacks/network": "^6.0.0",
+    "@stacks/transactions": "^6.0.0"
+  }
+}
+
