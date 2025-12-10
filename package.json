@@ -1,0 +1,43 @@
+{
+  "name": "sorters",
+  "version": "1.0.0",
+  "description": "A decentralized keeper for storing important notes on Stacks blockchain",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "clarinet test",
+    "deploy": "clarinet deploy"
+  },
+  "keywords": [
+    "stacks",
+    "blockchain",
+    "decentralized",
+    "notes",
+    "clarity",
+    "web3"
+  ],
+  "author": "Sorters Team",
+  "license": "MIT",
+  "dependencies": {
+    "@stacks/connect": "^7.0.0",
+    "@stacks/connect-react": "^7.0.0",
+    "@stacks/stacks-blockchain-api-types": "^7.0.0",
+    "@stacks/transactions": "^7.0.0",
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "stacks.js": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "typescript": "^5.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^14.0.0"
+  }
+}
+

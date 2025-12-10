@@ -1,0 +1,17 @@
+[project]
+name = "sorters"
+description = "A decentralized keeper for storing important notes on Stacks blockchain"
+version = "1.0.0"
+authors = ["Sorters Team"]
+
+[contracts.sorters]
+path = "sorters.clar"
+clarity_version = "2"
+
+[repl]
+costs_version = 2
+
+[network]
+name = "devnet"
+deployment_fee = 1000000
+
