@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useWallet } from '@/lib/wallet';
 import { WalletButton } from '@/components/WalletButton';
+import { ThemeToggle } from '@/components/ThemeToggle';
 import { NoteCard } from '@/components/NoteCard';
 import { NoteEditor } from '@/components/NoteEditor';
 import { useConnect } from '@stacks/connect-react';
@@ -161,7 +162,10 @@ export default function Home() {
                 Decentralized Note Keeper on Stacks Blockchain
               </p>
             </div>
-            <WalletButton />
+            <div className="flex items-center gap-4">
+              <ThemeToggle />
+              <WalletButton />
+            </div>
           </div>
 
           {isAuthenticated && (
