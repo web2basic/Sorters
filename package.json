@@ -10,6 +10,8 @@
     "devnet": "clarinet devnet",
     "deploy:testnet": "clarinet deploy --testnet",
     "deploy:mainnet": "clarinet deploy --mainnet",
+    "deploy": "node scripts/deploy-node.js",
+    "deploy:script": "./scripts/deploy-with-key.sh",
     "check": "clarinet check",
     "format": "prettier --write \"**/*.{js,ts,json,md,clar}\"",
     "lint": "eslint . --ext .js,.ts"
@@ -25,7 +27,6 @@
   "author": "Sorters Team",
   "license": "MIT",
   "devDependencies": {
-    "@stacks/clarinet-sdk": "^1.0.0",
     "@stacks/cli": "^6.0.0",
     "@types/node": "^20.0.0",
     "typescript": "^5.0.0"
@@ -33,7 +34,8 @@
   "dependencies": {
     "@stacks/connect": "^6.0.0",
     "@stacks/network": "^6.0.0",
-    "@stacks/transactions": "^6.0.0"
+    "@stacks/transactions": "^6.0.0",
+    "dotenv": "^16.3.1"
   }
 }
 
