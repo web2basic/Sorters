@@ -75,14 +75,20 @@ npm run deploy:testnet
 
 # Configure frontend environment
 cd frontend
-cp .env.example .env.local
-# Edit .env.local with your contract address
+# .env.local is already configured for mainnet deployment
+# Contract Address: SP2QNSNKR3NRDWNTX0Q7R4T8WGBJ8RE8RA516AKZP
 
 # Start frontend
 npm run dev
 ```
 
 ### 🌐 Mainnet Deployment
+
+**Contract Deployed:**
+- **Address**: `SP2QNSNKR3NRDWNTX0Q7R4T8WGBJ8RE8RA516AKZP`
+- **Contract Name**: `sorters`
+- **Network**: Mainnet
+- **Transaction**: [View on Explorer](https://explorer.stacks.co/txid/16fb9741b48ac3599494e093337a75852a560e1f6d?chain=mainnet)
 
 ⚠️ **Important**: Mainnet deployment is permanent. Ensure you have:
 - ✅ All tests passing

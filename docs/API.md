@@ -353,3 +353,4 @@ const getNote = async (noteId: number) => {
 4. **Monitor events** for real-time updates
 5. **Cache read-only data** to reduce API calls
 
+

@@ -1,0 +1,9 @@
+[node]
+rpc_address = "https://api.testnet.hiro.so"
+network = "testnet"
+
+[deployment]
+fee_rate = 1
+deployer = "REPLACE_WITH_YOUR_TESTNET_ADDRESS"
+
+
