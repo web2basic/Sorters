@@ -90,8 +90,6 @@ npm run dev
 - **Network**: Mainnet
 - **Transaction**: [View on Explorer](https://explorer.stacks.co/txid/16fb9741b48ac3599494e093337a75852a560e1f6d?chain=mainnet)
 
-### 🌐 Mainnet Deployment
-
 ⚠️ **Important**: Mainnet deployment is permanent. Ensure you have:
 - ✅ All tests passing
 - ✅ Testnet deployment tested thoroughly
