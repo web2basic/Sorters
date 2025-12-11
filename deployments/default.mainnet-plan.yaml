@@ -11,9 +11,8 @@ plan:
         - contract-publish:
             contract-name: sorters
             expected-sender: SP2QNSNKR3NRDWNTX0Q7R4T8WGBJ8RE8RA516AKZP
-            cost: 1000000
+            cost: 93980
             path: contracts/sorters.clar
             anchor-block-only: true
-            clarity-version: 4
-      epoch: "3.3"
-
+            clarity-version: 1
+      epoch: "2.05"
