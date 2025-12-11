@@ -130,16 +130,32 @@ async function deploy() {
   }
 
   try {
+    // Calculate fee based on contract size
+    // Minimum fee: 0.5 STX (500,000 microstacks) as requested
+    // Note: Deployment also has a base cost (~0.001-0.01 STX) separate from transaction fee
+    const contractSizeKB = contractCode.length / 1024;
+    const minFee = 500000; // 0.5 STX minimum transaction fee
+    const sizeFee = Math.ceil(contractSizeKB * 50000); // Reduced size fee
+    const calculatedFee = minFee + sizeFee;
+    // Use at least 0.5 STX, but more if calculated fee is higher
+    const estimatedFee = Math.max(minFee, calculatedFee);
+    
+    console.log(`📦 Preparing deployment...`);
+    console.log(`   Contract size: ~${contractSizeKB.toFixed(2)} KB`);
+    console.log(`   Minimum fee: 0.5 STX (as requested)`);
+    console.log(`   Calculated fee: ${(calculatedFee / 1000000).toFixed(6)} STX`);
+    console.log(`   Using fee: ${(estimatedFee / 1000000).toFixed(6)} STX`);
+    console.log(`   Your address: ${address}`);
+    console.log(`   Check balance: https://explorer.stacks.co/address/${address}?chain=${network}\n`);
+
     // Create deployment transaction
-    // Fee calculation: deployment typically costs 0.001-0.01 STX (100000-1000000 microstacks)
-    // Using a higher fee to ensure transaction goes through
     const txOptions = {
       contractName,
       codeBody: contractCode,
       senderKey: privateKey,
       network: stacksNetwork,
       anchorMode: AnchorMode.Any,
-      fee: 500000, // 0.5 STX fee in microstacks (higher fee for faster confirmation)
+      fee: estimatedFee,
     };
 
     console.log('📦 Creating deployment transaction...');
